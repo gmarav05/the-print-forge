@@ -25,9 +25,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-
         <img src={HeroImage.src} className="w-[350px] h-auto rounded-lg" />
-
       </section>
     </main>
   )
