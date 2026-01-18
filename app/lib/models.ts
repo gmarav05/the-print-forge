@@ -2,7 +2,7 @@ import modelsData from "../data/models.json"
 import type { Model, GetModelsParams } from "../types"
 
 export async function getModels({ category }: GetModelsParams = {}): Promise<Model[]> {
- 
+  
   let filteredModels = [...modelsData]
   if (category) {
     filteredModels = modelsData.filter(
@@ -13,7 +13,7 @@ export async function getModels({ category }: GetModelsParams = {}): Promise<Mod
 }
 
 export async function getModelById(id: string | number): Promise<Model> {
- 
+  
   const foundModel = modelsData.find(
     (model: Model) => model.id.toString() === id.toString()
   )
