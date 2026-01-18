@@ -22,6 +22,10 @@ const montserratAlternates = Montserrat_Alternates({
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <script 
+    type="module" 
+    src="https://cdn.jsdelivr.net/npm/nostr-components@latest/dist/components/nostr-zap-button.es.js">
+  </script>
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
         <NostrProvider /> 
          <ZapButton />
