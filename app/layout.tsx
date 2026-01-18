@@ -2,6 +2,10 @@ import "./globals.css";
 import type { RootLayoutProps } from "@/app/types"
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
 import Navbar from "@/app/components/Navbar"
+import NostrProvider from "@/app/components/NostrComponent";
+import ZapButton from "@/app/components/ZapButton";
+
+
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -19,9 +23,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
+        <NostrProvider /> 
+         <ZapButton />
         <Navbar />
         {children}
       </body>
+    
     </html>
   );
 }
