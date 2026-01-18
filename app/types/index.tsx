@@ -36,11 +36,10 @@ export type RootLayoutProps = Readonly<{
 }>
 
 export type ModelsPageProps = {
-    searchParams: {
-        q?: string
-    }
+  searchParams?: {
+    query?: string
+  }
 }
-
 export type ModelDetailPageProps = {
     params: Promise<{
         id: string
@@ -57,10 +56,9 @@ export type ModelsGridProps = {
     models: Model[]
 }
 
-export type PillProps = {
-    children: ReactNode
-    className?: string
-}
+export type PillProps = React.HTMLAttributes<HTMLDivElement> & {
+  children: React.ReactNode;
+};
 
 export type NavLinkProps = {
     href: string
