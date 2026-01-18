@@ -12,6 +12,7 @@ declare global {
           theme?: string
           url?: string
           text?: string
+          relays?: string
         }
       }
     }
