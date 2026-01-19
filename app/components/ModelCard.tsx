@@ -2,10 +2,11 @@ import Link from "next/link"
 import { FaRegHeart } from "react-icons/fa6"
 import Pill from "./Pill"
 import { ModelCardProps } from "@/app/types"
-import placeholderImg from "@/public/placeholder.png"
+import heroImageSquare from "@/public/hero-image-square.png"
 
 export default function ModelCard({ model }: ModelCardProps) {
     return (
+        <>
         <Link
             href={`/3d-models/${model.id}`}
             className="block group hover:shadow-[0_5px_12px_rgba(0,0,0,0.1)] hover:-translate-y-[3px] transition-all"
@@ -14,7 +15,7 @@ export default function ModelCard({ model }: ModelCardProps) {
             <div className="overflow-hidden transition-shadow bg-white rounded-lg shadow-md hover:shadow-lg" role="article">
                 <div className="relative aspect-square">
                     <img
-                        src={placeholderImg.src}
+                        src={heroImageSquare.src}
                         alt={model.name}
                         className="absolute inset-0 object-cover w-full h-full"
                     />
@@ -35,8 +36,14 @@ export default function ModelCard({ model }: ModelCardProps) {
                         <FaRegHeart className="w-5 h-5 mr-1 text-gray-400" aria-hidden="true" />
                         <span>{model.likes}</span>
                     </div>
+        <div className="p-4 pt-0">
+                <nostr-profile-badge
+    pubkey="npub180cvv07tjdrrgpa0j7j7tmnyl2yr6yr7l8j4s3evf6u64th6gkwsyjh6w6"
+  ></nostr-profile-badge>
+        </div>
                 </div>
             </div>
         </Link>
+    </>
     )
 }

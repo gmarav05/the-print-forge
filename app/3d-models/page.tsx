@@ -28,6 +28,7 @@ export default async function Page({ searchParams }: ModelsPageProps) {
                 />
             </Form>
             <ModelsGrid title="3D Models" models={filteredModels} />
+            
         </>
     )
 }
