@@ -21,6 +21,18 @@ A simple interactive 3D model marketplace which is built with **Next.js**. Where
 
 The Print Forge is a showcase platform for discovering and exploring 3D printable models. Users can browse models by category, view detailed information, and interact with the community through Nostr protocol integration.
 
+
+## Video
+
+
+
+## Image
+
+<img src="./HomePage.png" width="450" height="450" /> </br>
+<img src="./Search.png" width="450" height="450" /> </br>
+
+
+
 ## 🌟 Features
 
 ### Core Functionality
@@ -112,6 +124,7 @@ graph TD
 | **Build Tool** | Turbopack |
 | **Font Management** | Next.js Google Fonts |
 | **Web Components** | Custom Nostr Elements |
+| **Containerization** | Docker |
 
 ## 📁 Project Structure
 
@@ -159,6 +172,16 @@ the-print-forge/
 
 ## 🚀 Getting Started
 
+
+### Run with Docker
+
+```bash
+# Build the Docker image
+docker build -t the-print-forge .
+
+# Run the container
+docker run -p 3000:3000 the-print-forge
+
 ### Prerequisites
 - Node.js 18+ 
 - npm or yarn
@@ -176,6 +199,9 @@ npm install
 # Start development server
 npm run dev
 ```
+## 🐳 Docker Support
+
+This project includes a Docker setup for running the application in a containerized development environment.
 
 The application will be available at **http://localhost:3000**
 
